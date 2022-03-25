@@ -60,32 +60,35 @@
     <section class="info-pmb">
         <ul id="nav">
             <li class="nav-list">
-                <a class="nav-show-content" href="infoPmb/syaratPendaftaran.html">Syarat Pendaftaran <i
-                        class="fa-solid fa-plus"></i></a>
+                <a class="nav-show" href="infoPmb/syaratPendaftaran.html">Syarat Pendaftaran <i
+                        class="fa-solid fa-chevron-down"></i></a>
                 <div class="pendaftaran"></div>
             </li>
             <li class="nav-list">
-                <a class="nav-show-content" href="infoPmb/rincianPMB.html">Rincian PMB <i
-                        class="fa-solid fa-plus"></i></a>
+                <a class="nav-show" href="infoPmb/rincianPMB.html">Rincian PMB <i
+                        class="fa-solid fa-chevron-down"></i></a>
                 <div class="rincian"></div>
             </li>
             <li>
                 <button class="btn-drop" onclick="BtnDrop()">
-                    Info Beasiswa <i class="fa-solid fa-plus"></i>
+                    Info Beasiswa <i class="fa-solid fa-chevron-down"></i>
                 </button>
                 <div id="drop-item" class="drop-content">
-                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program KIP</a>
+                    <a class="nav-show" href="infoPmb/beasiswa1.html">Program KIP <i
+                            class="fa-solid fa-chevron-down"></i></a>
                     <div class="kip"></div>
 
-                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program Beasiswa PPA</a>
+                    <a class="nav-show" href="infoPmb/beasiswa1.html">Program Beasiswa PPA <i
+                            class="fa-solid fa-chevron-down"></i></a>
                     <div class="ppa"></div>
 
-                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program Beasiswa Khusus</a>
+                    <a class="nav-show" href="infoPmb/beasiswa1.html">Program Beasiswa Khusus <i
+                            class="fa-solid fa-chevron-down"></i></a>
                     <div class="khusus"></div>
                 </div>
             </li>
             <li class="nav-list">
-                <a class="nav-show-content" href="page3.html">Biaya Pendidikan <i class="fa-solid fa-plus"></i></a>
+                <a class="nav-show" href="page3.html">Biaya Pendidikan <i class="fa-solid fa-chevron-down"></i></a>
             </li>
         </ul>
 
@@ -181,7 +184,7 @@
     <script>
         $(document).ready(function () {
             $("#nav .nav-list a,#nav .drop-content a").click(function () {
-                $("#ajax-content")
+                $("#ajax-content, .pendaftaran, .rincian, .kip, .khusus, .ppa")
                     .empty()
                     .append(
                         "<div id='loading'><img src='img/loading.gif' alt='Loading' /></div>"
@@ -198,7 +201,7 @@
                         setTimeout(function () {
                             $(".pendaftaran, .rincian, .kip, .khusus, .ppa").empty()
                                 .append(html);
-                        }, 0);
+                        }, 1500);
                     },
                 });
                 return false;
@@ -222,7 +225,7 @@
         });
     </script>
     <script>
-        const ajaxMobileClick = document.querySelectorAll(".nav-show-content");
+        const ajaxMobileClick = document.querySelectorAll(".nav-show");
         const ajaxMobileContent = document.querySelectorAll(".pendaftaran, .rincian, .kip, .khusus, .ppa");
 
         ajaxMobileClick.forEach((btn) => {
@@ -301,6 +304,12 @@
         background: #172d97;
     }
 
+    .nav-list a i,
+    .btn-drop i,
+    .nav-show i {
+        display: none;
+    }
+
     #nav .drop-content a.current {
         background: #696b74;
         color: #fff;
@@ -329,6 +338,7 @@
         padding: 10px 0;
         color: #000;
         text-align: center;
+        display: flex;
     }
 
     .btn-drop {
@@ -409,14 +419,11 @@
             text-align: left;
         }
 
-        .nav-list a i {
+        .nav-list a i,
+        .btn-drop i,
+        .nav-show i {
             display: flex;
             align-items: center;
-            margin-left: auto;
-            margin-right: 20px;
-        }
-
-        .btn-drop i {
             margin-left: auto;
             margin-right: 20px;
         }
