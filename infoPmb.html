@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
@@ -19,7 +19,7 @@
     <a id="btn-top"></a>
     <div class="hubungi-kami">
         <div class="profile" onclick="popupWA();">
-            <img src="/img/wa.png" />
+            <img src="img/wa.png" />
             <!-- <button class="btn-contact">
                 <span>Contact Us</span>
             </button> -->
@@ -31,22 +31,22 @@
             </h3>
             <ul>
                 <li>
-                    <img src="/img/wa.png" /><a href="#">Penerimaan Mahasiswa Baru</a>
+                    <img src="img/wa.png" /><a href="#">Penerimaan Mahasiswa Baru</a>
                 </li>
                 <li>
-                    <img src="/img/wa.png" /><a href="#">Biro Administrasi Akademik dan Kemahasiswaan</a>
+                    <img src="img/wa.png" /><a href="#">Biro Administrasi Akademik dan Kemahasiswaan</a>
                 </li>
             </ul>
         </div>
     </div>
     <header>
         <a href="#" class="logo">
-            <img src="/img/logo.png" />
+            <img src="img/logo.png" />
             <h3>STMIK Bani Saleh</h3>
         </a>
 
         <ul class="nav-link">
-            <li class="nav-item active"><a href="/index.html">Home</a></li>
+            <li class="nav-item active"><a href="index.html">Home</a></li>
             <li class="nav-item"><a href="infoPmb.html">Info PMB</a></li>
             <li class="nav-item"><a href="#">Beasiswa</a></li>
         </ul>
@@ -60,12 +60,13 @@
     <section class="info-pmb">
         <ul id="nav">
             <li class="nav-list">
-                <a class="nav-show-content" href="syaratPendaftaran.html">Syarat Pendaftaran <i
+                <a class="nav-show-content" href="infoPmb/syaratPendaftaran.html">Syarat Pendaftaran <i
                         class="fa-solid fa-plus"></i></a>
                 <div class="pendaftaran"></div>
             </li>
             <li class="nav-list">
-                <a class="nav-show-content" href="rincianPMB.html">Rincian PMB <i class="fa-solid fa-plus"></i></a>
+                <a class="nav-show-content" href="infoPmb/rincianPMB.html">Rincian PMB <i
+                        class="fa-solid fa-plus"></i></a>
                 <div class="rincian"></div>
             </li>
             <li>
@@ -73,13 +74,13 @@
                     Info Beasiswa <i class="fa-solid fa-plus"></i>
                 </button>
                 <div id="drop-item" class="drop-content">
-                    <a class="nav-show-content" href="beasiswa1.html">Program KIP</a>
+                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program KIP</a>
                     <div class="kip"></div>
 
-                    <a class="nav-show-content" href="beasiswa2.html">Program Beasiswa PPA</a>
+                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program Beasiswa PPA</a>
                     <div class="ppa"></div>
 
-                    <a class="nav-show-content" href="beasiswa3.html">Program Beasiswa Khusus</a>
+                    <a class="nav-show-content" href="infoPmb/beasiswa1.html">Program Beasiswa Khusus</a>
                     <div class="khusus"></div>
                 </div>
             </li>
@@ -165,7 +166,7 @@
     </footer>
     <footer class="footer-bottom">
         <div class="footer-logo">
-            <img src="/img/logo.png" alt="STMIK Bani Saleh" />
+            <img src="img/logo.png" alt="STMIK Bani Saleh" />
             <p>Copyright STMIK BANI SALEH 2021</p>
         </div>
         <div class="link-social">
@@ -183,7 +184,7 @@
                 $("#ajax-content")
                     .empty()
                     .append(
-                        "<div id='loading'><img src='loading.gif' alt='Loading' /></div>"
+                        "<div id='loading'><img src='img/loading.gif' alt='Loading' /></div>"
                     );
                 // $("#nav .nav-list a,#nav .drop-content a").removeClass("current");
                 // $(this).addClass("current");
@@ -206,10 +207,10 @@
             $("#ajax-content")
                 .empty()
                 .append(
-                    "<div id='loading'><img src='loading.gif' alt='Loading' /></div>"
+                    "<div id='loading'><img src='img/loading.gif' alt='Loading' /></div>"
                 );
             $.ajax({
-                url: "syaratPendaftaran.html",
+                url: "infoPmb/syaratPendaftaran.html",
                 success: function (html) {
                     $("#ajax-content")
                         .empty()
