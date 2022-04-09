@@ -46,7 +46,7 @@
             <li class="nav-item"><a href="infoPmb.html">Info PMB</a></li>
             <li class="nav-item"><a href="#">Beasiswa</a></li>
         </ul>
-        <a href="#" class="btn-login">
+        <a href="login.html" class="btn-login">
             <button>Masuk</button>
         </a>
 
@@ -63,9 +63,12 @@
                 <button class="btn-daftar">Daftar Sekarang</button>
                 <button class="btn-download">Download Brosur</button>
             </div>
-            <div class="col50" data-aos="fade-left" data-aos-duration="1000">
+            <div class="col50" id="img-slide">
                 <div class="imgBox">
-                    <img src="img/bg2.jpg">
+                    <img src="img/mahasiswa1.png">
+                </div>
+                <div class="imgBox">
+                    <img src="img/mahasiswa2.png" style="left: 60px;">
                 </div>
             </div>
         </div>
@@ -298,10 +301,10 @@
         $(window).scroll(function () {
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
-                wa.addClass('show');
+                // wa.addClass('show');
             } else {
                 btn.removeClass('show');
-                wa.removeClass('show');
+                // wa.removeClass('show');
             }
         });
 
@@ -311,6 +314,19 @@
                 scrollTop: 0
             }, '300');
         });
+    </script>
+
+    <script>
+        $("#img-slide > .imgBox:gt(0)").hide();
+
+        setInterval(function () {
+            $('#img-slide > .imgBox:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('#img-slide');
+        }, 3000);
     </script>
 </body>
 
