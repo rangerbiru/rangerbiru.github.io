@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -64,9 +65,9 @@
     transition: .3s;
 }
 
-.hubungi-kami .profile:hover {
+/* .hubungi-kami .profile:hover {
     filter: brightness(90%);
-}
+} */
 
 .hubungi-kami .profile img {
     position: absolute;
@@ -76,6 +77,13 @@
     height: 100%;
     object-fit: cover;
 }
+
+/* .hubungi-kami .profile::after {
+    content: 'Contact Us';
+    position: fixed;
+    left: 100px;
+    background-color: red;
+} */
 
 .hubungi-kami .menu::before {
     content: '';
@@ -180,21 +188,26 @@
         left: 20px;
         bottom: 25px;
     }
+
     .hubungi-kami .profile {
         width: 40px;
         height: 40px;
     }
+
     .hubungi-kami .menu {
         left: -15px;
         width: 240px;
     }
+
     .hubungi-kami .menu.active {
         width: 240px;
     }
+
     .hubungi-kami .menu ul li a {
         font-size: 12px;
         font-weight: 500;
     }
+
     .hubungi-kami .menu h3 {
         font-size: 16px;
         padding: 18px 0;
@@ -690,6 +703,7 @@ ul {
         bottom: 25px;
         right: 20px;
     }
+
     /* Header */
     header {
         padding: 18px 20px;
@@ -701,10 +715,12 @@ ul {
         width: 100%;
         box-shadow: rgb(136 165 191 / 48%) 6px 2px 16px 0px, rgb(255 255 255 / 80%) -6px -2px 16px 0px;
     }
+
     header .nav-link,
     header .logo h3 {
         display: none;
     }
+
     header .nav-link.active {
         width: 100%;
         height: calc(100% - 68px);
@@ -717,13 +733,16 @@ ul {
         flex-direction: column;
         background: #fff;
     }
+
     header .nav-link li {
         margin: 10px 0;
     }
+
     header .nav-link li a {
         color: #292929;
         font-size: 1.5em;
     }
+
     .menuToggle {
         position: relative;
         width: 30px;
@@ -736,6 +755,7 @@ ul {
         margin-left: 20px;
         cursor: pointer;
     }
+
     .menuToggle.active {
         background: url(img/close.png);
         filter: brightness(0%);
@@ -743,69 +763,86 @@ ul {
         background-repeat: no-repeat;
         background-position: center;
     }
+
     header .menuToggle {
         filter: invert(1);
     }
+
     header .btn-login button {
         margin-bottom: 0;
         padding: 10px 15px;
     }
+
     .logo img {
         width: 50px;
     }
+
     /* Beranda */
     .beranda {
         padding: 80px 20px;
         padding-bottom: 50px;
     }
+
     .row {
         flex-direction: column-reverse;
     }
+
     .row .col50 {
         position: relative;
         width: 100%;
     }
+
     .titleText {
         font-size: 38px;
         margin-bottom: 10px;
         margin-top: 20rem;
         line-height: 55px;
     }
+
     br {
         display: none;
     }
+
     .col50.text-content {
         margin-top: 30px;
     }
+
     .col50 p {
         font-size: 16px;
         letter-spacing: 1px;
     }
+
     .col50 .btn-daftar {
         margin: 35px 0 15px 0;
         width: 100%;
     }
+
     .col50 .btn-download {
         width: 100%;
     }
+
     .row .col50 .imgBox {
         height: 280px;
         margin-top: 40px;
         overflow-x: hidden;
     }
+
     /* Why Banisaleh */
     .why-bansal {
         padding: 80px 20px;
     }
+
     .title h2 {
         font-size: 28px;
         font-weight: 700;
     }
+
     .why-row {
         justify-content: center;
         margin: 30px 0;
         flex-direction: column;
     }
+
     .why-row .col30 {
         width: 100%;
         margin: 10px 0;
@@ -814,92 +851,115 @@ ul {
         background: #fff;
         border-radius: 5px;
     }
+
     /* Proses */
     .mitra {
         padding: 80px 0;
     }
+
     .proses {
         padding: 80px 20px;
         margin-top: 0px;
     }
+
     .proses-pendaftaran {
         margin-top: 65px;
     }
+
     .info-left {
         margin-right: 205px;
     }
+
     .info-right {
         margin-left: 205px;
     }
+
     .btn-info {
         width: 140px;
         height: 60px;
         font-size: 14px;
     }
+
     .circle-icon {
         padding: 22px;
         margin-top: -14px;
     }
+
     .icon-proses {
         width: 25px;
         margin-top: -5px;
     }
+
     .line-proses {
         margin-top: 25px;
         width: 6px;
     }
+
     /* Kemitraan */
     .mitra .title {
         margin-bottom: 20px;
     }
+
     .mitra-col-1,
     .mitra-col-2 {
         margin: 25px 15px;
     }
+
     .mitra-col-1 img {
         width: 90px;
     }
+
     .mitra-col-2 img {
         width: 80px;
     }
+
     .mitra-row-2 {
         margin: 10px;
     }
+
     /* Footer */
     .footer {
         padding: 30px 10px;
         width: 100%;
     }
+
     .footer-container {
         margin: 0;
     }
+
     .footer-row {
         left: 0;
         transform: translateX(0);
         flex-direction: column;
     }
+
     .footer-col {
         width: 100%;
         margin: 20px 0;
     }
+
     /* Footer Bawah */
     .footer-bottom {
         padding: 30px 0;
         display: flex;
         flex-direction: column-reverse;
     }
+
     .footer-logo {
         margin-right: 0;
         justify-content: center;
         margin-top: 20px;
     }
+
     .footer-logo img {
         width: 25px;
     }
+
     .link-social {
         display: flex;
         justify-content: center;
     }
+
     .link-social a {
         height: 35px;
         width: 36px;
