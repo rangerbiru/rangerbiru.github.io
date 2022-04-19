@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/bansal.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Login Page | STMIK Bani Saleh</title>
 </head>
 
@@ -34,6 +35,9 @@
                 <div class="btn-masuk">
                     <button type="submit">Masuk</button>
                 </div>
+
+                <a href="/" class="kembali"><i class="fa-solid fa-circle-arrow-left back"></i>Kembali Ke Halaman
+                    Awal</a>
             </form>
         </div>
     </div>
@@ -93,7 +97,7 @@
     }
 
     .logo-text {
-        font-size: 18px;
+        font-size: 20px;
         margin-left: 10px;
         font-weight: 700;
     }
@@ -143,6 +147,26 @@
 
     .btn-masuk button:hover {
         background-color: #1b309e;
+    }
+
+    .kembali {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        color: #000;
+        align-items: center;
+        font-weight: 500;
+        transition: .3s;
+        font-size: 14px;
+    }
+
+    .kembali:hover {
+        color: #294bff;
+    }
+
+    .back {
+        margin-right: 10px;
+        font-size: 16px;
     }
 
     @media(max-width: 991px) {
