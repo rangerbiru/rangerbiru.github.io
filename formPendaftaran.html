@@ -40,10 +40,13 @@
                 <strong>Terima kasih!</strong> Data anda sudah kami terima
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form class="form-input">
+            <form class="form-input needs-validation" novalidate>
                 <div class="form-1">
-                    <input type="text" class="input-nama form-control" placeholder="Masukkan Nama Lengkap Anda">
-                    <select name="jk" class="select-jk form-select">
+
+                    <input type="text" class="input-nama form-control" placeholder="Masukkan Nama Lengkap Anda" required>
+
+
+                    <select name="jk" class="select-jk form-select" required>
                         <option value="Pilih Jenis Kelamin Anda" disabled selected>Pilih Jenis Kelamin Anda</option>
                         <option value="Laki-laki">Laki-laki</option>
                         <option value="Perempuan">Perempuan</option>
@@ -51,23 +54,23 @@
                     </select>
                 </div>
                 <div class="form-1">
-                    <input type="email" class="input-nama form-control" placeholder="Masukkan Email Anda">
-                    <input type="number" class="input-no form-control" placeholder="Masukkan Nomor Telepon Anda">
+                    <input type="email" class="input-nama form-control" placeholder="Masukkan Email Anda" required>
+                    <input type="number" class="input-no form-control" placeholder="Masukkan Nomor Telepon Anda" required>
                 </div>
                 <div class="form-2">
-                    <select name="jk" class="select-studi form-select">
+                    <select name="jk" class="select-studi form-select" required>
                         <option value="Pilih Jalur Pendaftaran" disabled selected>Pilih Jalur Pendaftaran</option>
                         <option value="pendaftaran-1">pendaftaran-1</option>
                         <option value="pendaftaran-2">pendaftaran-2</option>
                         <option value="Lainnya">Lainnya</option>
                     </select>
-                    <select name="jk" class="select-studi form-select">
+                    <select name="jk" class="select-studi form-select" required>
                         <option value="Pilih Program Studi 1" disabled selected>Pilih Program Studi 1</option>
                         <option value="Teknik Informatika">Teknik Informatika</option>
                         <option value="Sistem Informasi">Sistem Informasi</option>
                         <option value="Lainnya">Lainnya</option>
                     </select>
-                    <select name="jk" class="select-studi form-select">
+                    <select name="jk" class="select-studi form-select" required>
                         <option value="Pilih Program Studi 2" disabled selected>Pilih Program Studi 2</option>
                         <option value="Teknik Informatika">Teknik Informatika</option>
                         <option value="Sistem Informasi">Sistem Informasi</option>
@@ -76,7 +79,7 @@
                 </div>
 
                 <!--Sementara gw kasih onclick bwat preview kri, tinggal nyesuain sma PHP lu :)--->
-                <button type="button" onclick="submitForm()" class="btn-daftar">DAFTAR</button>
+                <button type="submit" onclick="submitForm()" class="btn-daftar">DAFTAR</button>
             </form>
         </div>
     </div>
@@ -86,6 +89,27 @@
             var alertForm = document.querySelector('.alert');
             alertForm.classList.toggle('d-none');
         }
+
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
     </script>
 </body>
 
@@ -161,12 +185,12 @@
         padding: 12px 20px;
         border-radius: 10px;
         border: 1px solid #333;
-        width: 25rem;
+        width: 60%;
     }
     
     .select-jk,
     .input-no {
-        width: 18rem;
+        width: 40%;
     }
     
     .form-2 {
@@ -183,14 +207,14 @@
     }
     
     .btn-daftar {
-        padding: 10px 25px;
+        padding: 12px 25px;
         border: 1px solid #294bff;
         border-radius: 10px;
         cursor: pointer;
         transition: all .5s ease 0s;
         color: #fff;
         font-weight: 500;
-        margin: 10px;
+        margin: 30px 10px 0;
         width: 200px;
         background: #294bff;
         position: relative;
