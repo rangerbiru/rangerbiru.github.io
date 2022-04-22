@@ -1,4 +1,4 @@
-<div id="content-pmb">
+<div id="content-pmb" style="padding: 25px;">
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -7,27 +7,44 @@
     <meta name="robots" content="all">
     <title>Rincian PMB</title>
 
-    <div class="card-body position-relative">
-        <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM S1-SISTEM INFORMASI, KELAS (REGULER)</h3>
-        <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+    <div class="container">
+
+        <div class="btn-rincian">
+            <button class="ti">S1-TI</button>
+            <button class="si">S1-SI</button>
+            <button class="tk">D3-TK</button>
+            <button class="ka">D3-KA</button>
+            <button class="mi">D3-MI</button>
+        </div>
+
+        <select class="select-kelas">
+            <option value="Pilih Kelas" selected disabled>Pilih Kelas Anda</option>
+            <option value="Kelas1">Kelas1</option>
+            <option value="Kelas1">Kelas1</option>
+            <option value="Kelas1">Kelas1</option>
+            <option value="Kelas1">Kelas1</option>
+            <option value="Kelas1">Kelas1</option>
+        </select>
+
+        <div id="table-si">
+            <table class="table-rincian">
                 <thead>
                     <tr>
-                        <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
+                        <th class="title-table" rowspan="2" scope="col">JENIS
                             BIAYA
                         </th>
-                        <th class="bg-success text-white text-uppercase" colspan="8" scope="col">PROGRAM S1 / SISTEM
+                        <th class="title-table" colspan="8" scope="col">PROGRAM S1 / SISTEM
                             INFORMASI (SI)</th>
                     </tr>
                     <tr>
-                        <th class="bg-success text-white text-uppercase" scope="col">1</th>
-                        <th class="bg-danger text-white text-uppercase" scope="col">2</th>
-                        <th class="bg-info text-white text-uppercase" scope="col">3</th>
-                        <th class="bg-purple text-white text-uppercase" scope="col">4</th>
-                        <th class="bg-pink text-white text-uppercase" scope="col">5</th>
-                        <th class="bg-success text-white text-uppercase" scope="col">6</th>
-                        <th class="bg-danger text-white text-uppercase" scope="col">7</th>
-                        <th class="bg-info text-white text-uppercase" scope="col">8</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,7 +163,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM S1-TEKNIK INFORMATIKA, KELAS (REGULER)</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -282,7 +299,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM S1-SISTEM INFORMASI, KELAS (EXTENTION)</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -418,7 +435,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM S1-TEKNIK INFORMATIKA, KELAS (EXTENTION)</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -554,7 +571,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM D3-TEKNIK KOMPUTER</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -664,7 +681,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM D3-KOMPUTERISASI AKUNTANSI</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -774,7 +791,7 @@
         </div>
         <h3 class="card-title text-warning">DAFTAR RINCIAN BIAYA PROGRAM D3-MANAJEMEN INFORMATIKA</h3>
         <div class="table-responsive table-class-schedule">
-            <table border="0" class="table table-bordered text-center">
+            <table class="table table-bordered text-center">
                 <thead>
                     <tr>
                         <th class="bg-warning text-white text-uppercase font-size-18" rowspan="2" scope="col">JENIS
@@ -890,7 +907,44 @@
 </div>
 
 <style>
-    .table-responsive {
-        margin: 30px 0;
+    .table-rincian {
+        border-collapse: collapse;
+    }
+
+    .table-rincian,
+    th,
+    td {
+        border: 1px solid #333;
+        text-align: center;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .btn-rincian {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .btn-rincian button {
+        padding: 12px 25px;
+        background-color: #294bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    .select-kelas {
+        padding: 10px 30px 10px 10px;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url('../img/arrow-down.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 8px) center;
+        background-size: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
     }
 </style>
