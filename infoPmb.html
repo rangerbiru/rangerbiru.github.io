@@ -10,9 +10,8 @@
     <link rel="icon" href="img/bansal.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
-        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <title>Info PMB | STMIK Bani Saleh</title>
 </head>
 
@@ -114,8 +113,7 @@
                 <div class="footer-col">
                     <h4>Alamat Pendaftaran</h4>
                     <p>
-                        Jl. Mayor M. Hasibuan No 68, Margahayu, Bekasi Timur, Kota Bekasi,
-                        Jawa Barat 17113
+                        Jl. Mayor M. Hasibuan No 68, Margahayu, Bekasi Timur, Kota Bekasi, Jawa Barat 17113
                     </p>
                 </div>
 
@@ -164,8 +162,8 @@
     </footer>
 
     <script>
-        $(document).ready(function () {
-            $("#nav .nav-list a,#nav .drop-content a").click(function () {
+        $(document).ready(function() {
+            $("#nav .nav-list a,#nav .drop-content a").click(function() {
                 $("#ajax-content, .pendaftaran, .rincian, .kip, .khusus, .ppa")
                     .empty()
                     .append(
@@ -176,11 +174,11 @@
 
                 $.ajax({
                     url: this.href,
-                    success: function (html) {
-                        setTimeout(function () {
+                    success: function(html) {
+                        setTimeout(function() {
                             $("#ajax-content").empty().append(html);
                         }, 3000);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             $(".pendaftaran, .rincian, .kip, .khusus, .ppa").empty()
                                 .append(html);
                         }, 4000);
@@ -196,7 +194,7 @@
             //     );
             $.ajax({
                 url: "infoPmb/syaratPendaftaran.html",
-                success: function (html) {
+                success: function(html) {
                     $("#ajax-content")
                         .empty()
                         .append(
@@ -228,6 +226,8 @@
             })
         });
     </script>
+
+
 </body>
 
 <style>
@@ -236,19 +236,19 @@
         justify-content: center;
         padding: 80px 0px;
     }
-
+    
     #loading {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
+    
     #loading img {
         width: 100px;
         height: auto;
     }
-
+    
     .welcome {
         position: absolute;
         left: 50%;
@@ -258,16 +258,16 @@
         text-align: center;
         font-weight: 600;
     }
-
+    
     #nav {
         clear: both;
         overflow: hidden;
     }
-
+    
     #nav .nav-list {
         margin: 15px 25px 0 0;
     }
-
+    
     #nav .nav-list a,
     #nav .nav-list a:visited {
         display: flex;
@@ -282,36 +282,35 @@
         text-decoration: none;
         transition: 0.3s;
     }
-
+    
     #nav .nav-list a:hover,
     .btn-drop:hover {
         background-color: #0b185a;
     }
-
+    
     #nav .nav-list a.current {
         background: #172d97;
     }
-
+    
     #nav .drop-content a.current {
         background: #696b74;
         color: #fff;
     }
-
+    
     #ajax-content {
         position: relative;
         width: 800px;
         overflow-y: scroll;
         border-radius: 5px;
         height: 500px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     }
-
+    
     #content-pmb {
         padding: 30px;
         ;
     }
-
+    
     .drop-content a {
         margin: 10px 0;
         background-color: #dfe4f6;
@@ -325,11 +324,11 @@
         justify-content: center;
         transition: .3s;
     }
-
+    
     .drop-content a:hover {
         background-color: #bbbfce;
     }
-
+    
     .btn-drop {
         display: flex;
         padding: 10px 0;
@@ -346,7 +345,7 @@
         border: none;
         align-items: center;
     }
-
+    
     .drop-content {
         display: none;
         position: relative;
@@ -354,23 +353,23 @@
         overflow: auto;
         z-index: 1;
     }
-
+    
     .show {
         display: flex;
         flex-direction: column;
     }
-
+    
     #ajax-content h2,
     #ajax-content p {
         padding: 0 10px;
     }
-
+    
     #ajax-content ul {
         margin: 0 0 0 20px;
         list-style: disc;
         line-height: 1.5em;
     }
-
+    
     .pendaftaran,
     .rincian,
     .kip,
@@ -378,37 +377,33 @@
     .ppa {
         display: none;
     }
-
+    
     .nav-show i,
     .btn-drop i {
         display: none;
     }
-
+    
     a.active {
         text-decoration: none;
     }
-
+    
     @media (max-width: 991px) {
         .info-pmb {
             flex-direction: column;
             align-items: center;
         }
-
         #nav {
             margin: 20px 0;
             width: 90%;
         }
-
         #nav .nav-list {
             width: 100%;
         }
-
         #nav .nav-list a {
             width: auto;
             justify-content: flex-start;
             padding-left: 20px;
         }
-
         .btn-drop,
         .drop-content a {
             width: 100%;
@@ -416,7 +411,6 @@
             padding-left: 20px;
             text-align: left;
         }
-
         .btn-drop i,
         .nav-show i {
             display: flex;
@@ -424,11 +418,9 @@
             margin-left: auto;
             margin-right: 20px;
         }
-
         #ajax-content {
             display: none;
         }
-
         .pendaftaran,
         .rincian,
         .kip,
@@ -440,7 +432,6 @@
             max-height: 0;
             overflow-y: scroll;
         }
-
         .pendaftaran.active,
         .rincian.active,
         .kip.active,
@@ -449,7 +440,6 @@
             max-height: 40rem;
             transition: all 1s ease-in;
         }
-
         #loading {
             position: relative;
             display: block;
@@ -458,7 +448,6 @@
             transform: translateX(-50%);
             margin: 20px 0;
         }
-
         #loading img {
             width: 50px;
             height: auto;
