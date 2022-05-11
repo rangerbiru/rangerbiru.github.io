@@ -5,324 +5,215 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/bansal.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <title>Home Page | STMIK Bani Saleh</title>
+    <link rel="shortcut icon" href="./img/fav/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="./img/fav/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./img/fav/favicon-32x32.png" sizes="32x32">
+    <title>My Portfolio</title>
 </head>
 
 <body>
-    <a id="btn-top"></a>
-    <div class="hubungi-kami">
-        <div class="profile" onclick="popupWA();">
-            <img src="img/wa.png">
-            <!-- <button class="btn-contact">
-                <span>Contact Us</span>
-            </button> -->
-        </div>
-        <div class="menu">
-            <h3>Hubungi Kami <i class="fa-solid fa-headset" style="margin-left: 10px;"></i></h3>
+    <div class="container">
+        <div class="navigation">
             <ul>
-                <li><img src="img/wa.png"><a href="#">Penerimaan Mahasiswa Baru</a></li>
-                <li><img src="img/wa.png"><a href="#">Biro Administrasi Akademik dan Kemahasiswaan</a></li>
+                <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu();">About</a></li>
+                <li><a href="#services" onclick="toggleMenu();">Services</a></li>
+                <li><a href="#project" onclick="toggleMenu();">Project</a></li>
+                <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
             </ul>
         </div>
-    </div>
-    <header>
-        <a href="#" class="logo">
-            <img src="img/logo.png">
-            <h3>STMIK Bani Saleh</h3>
-        </a>
 
-        <ul class="nav-link">
-            <li class="nav-item active"><a href="index.html">Home</a></li>
-            <li class="nav-item"><a href="infoPmb.html">Info PMB</a></li>
-        </ul>
-        <a href="login.html" class="btn-login">
-            <button>Masuk</button>
-        </a>
-
-        <div class="menuToggle" onclick="toggleMenu();"></div>
-    </header>
-
-    <section id="beranda" class="beranda">
-        <div class="row">
-            <div class="col50 text-content" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
-                <h2 class="titleText">Masa depan adalah milikmu, segeralah bangun dan belajar.</h2>
-                <p>Seiringnya waktu berjalan dan semakin <br> dibutuhkan nya aplikasi komputer dimana-mana,<br> maka pelajarilah komputer. Mantap!</p>
-
-                <a href="formPendaftaran.html"><button class="btn-daftar">Daftar Sekarang</button></a>
-                <button class="btn-download">Download Brosur</button>
-            </div>
-            <div class="col50 img-box" id="img-slide" data-aos="fade-in" data-aos-duration="1000">
-                <div class="imgBox">
-                    <img src="img/mahasiswa1.png">
-                </div>
-                <div class="imgBox">
-                    <img src="img/mahasiswa2.png" style="left: 40px;">
+        <div class="main">
+            <div class="topbar">
+                <a href="#" class="logo">Portfolio</a>
+                <div class="toggle">
+                    <i class="fas fa-bars"></i>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="why-bansal">
-        <div class="title">
-            <h2>Mengapa Memilih STMIK Bani Saleh</h2>
-        </div>
-        <div class="why-row">
-            <div class="col30">
-                <img src="img/wifi.png">
-                <!-- <i class="fas fa-wifi"></i> -->
-                <h3>Ruangan Belajar Full AC & Wifi</h3>
-                <p>Terdapat ruang untuk proses belajar mengajar dengan kapasitas kelas maksimal 30 mahasiswa/i dengan fasilitas full AC dan Wifi</p>
-            </div>
-            <div class="col30">
-                <!-- <i class="fas fa-desktop"></i> -->
-                <img src="img/monitor.png">
-                <h3>12 Kelas Komputer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio porro labore odio corporis debitis.
-                </p>
-            </div>
-            <div class="col30">
-                <!-- <i class="fas fa-mobile-alt"></i> -->
-                <img src="img/handphone.png">
-                <h3>Sistem Absensi Online & Mobile</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex distinctio porro labore odio corporis debitis.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="proses">
-        <div class="title">
-            <h2>Proses Pendaftaran</h2>
-        </div>
-
-        <div class="proses-pendaftaran">
-            <div class="info-left">
-                <span class="btn-info">Calon Mahasiswa</span>
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-student-64 1.png">
-                <div class="line-proses"></div>
-            </div>
-
-            <div class="info-right">
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-registration-64 (2) 1.png">
-                <div class="line-proses"></div>
-                <span class="btn-info">Register</span>
-            </div>
-
-            <div class="info-left">
-                <span class="btn-info">Bayar Uang Pendaftaran</span>
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-pay-64 1.png">
-                <div class="line-proses"></div>
-            </div>
-
-            <div class="info-right">
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-registration-64 (3) 1.png">
-                <div class="line-proses"></div>
-                <span class="btn-info">Melengkapi Formulir</span>
-            </div>
-
-            <div class="info-left">
-                <span class="btn-info">Pengumuman Seleksi</span>
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-announcement-64 1.png">
-                <div class="line-proses"></div>
-            </div>
-
-            <div class="info-right">
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-pay-64 1.png">
-                <div class="line-proses"></div>
-                <span class="btn-info">Pembayaran Uang Kuliah</span>
-            </div>
-
-            <div class="info-left">
-                <span class="btn-info">Daftar Ulang</span>
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-registration-64 (3) 1.png">
-                <div class="line-proses"></div>
-            </div>
-
-            <div class="info-right">
-                <div class="circle-icon"></div>
-                <img class="icon-proses" src="img/icon-proses/icons8-student-60 1.png">
-                <div class="line-proses"></div>
-                <span class="btn-info">Mahasiswa Bani Saleh</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="mitra">
-        <div class="title">
-            <h2>Kemitraan</h2>
-        </div>
-        <div class="mitra-row-1">
-            <div class="mitra-col-1">
-                <img src="img/bri2.png" alt="Bank BRI">
-            </div>
-
-            <div class="mitra-col-1">
-                <img src="img/bni2.png" alt="Bank BNI">
-            </div>
-
-            <div class="mitra-col-1">
-                <img src="img/mandirisyariah2.png" alt="Bank Mandiri Syariah">
-            </div>
-
-            <div class="mitra-col-1 lpan">
-                <img src="img/lpan.png" alt="LPAN">
-            </div>
-            <div class="mitra-col-2">
-                <img src="img/gundar.png" alt="Gunadarma">
-            </div>
-
-            <div class="mitra-col-2">
-                <img src="img/Logo_BNN.png" alt="BNN">
-            </div>
-
-            <div class="mitra-col-2">
-                <img src="img/Logo-Budi-Luhur-Universitas-Budi-Luhur-PNG.png" alt="Univ. Budi Luhur">
-            </div>
-
-            <div class="mitra-col-2">
-                <img src="img/takaful.png" alt="Takaful">
-            </div>
-
-            <div class="mitra-col-2">
-                <img src="img/bekasi.png" alt="Kota Bekasi">
-            </div>
-        </div>
-        <!-- <div class="mitra-row-2">
-
-        </div> -->
-    </section>
-
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-row">
-                <div class="footer-col">
-                    <h4>Jenis Pendaftaran</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kelas Reguler Pagi</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kelas Reguler Malam</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Kelas Karyawan</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Alamat Pendaftaran</h4>
-                    <p>Jl. Mayor M. Hasibuan No 68, Margahayu, Bekasi Timur, Kota Bekasi, Jawa Barat 17113</p>
-                    <!-- <ul>
-                        <li><a href="#">Profesi</a></li>
-                        <li><a href="#">Karyawan</a></li>
-                        <li><a href="#">Kelas Malam</a></li>
-                        <li><a href="#">Beasiswa</a></li>
-                    </ul> -->
-                </div>
-
-                <div class="footer-col">
-                    <h4>Helpdesk</h4>
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-whatsapp"></i> 0811 1453 633</a></li>
-                        <li><a href="#"><i class="fa-solid fa-envelope"></i> stmik@stmik.banisaleh.ac.id</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Panduan</h4>
-                    <ul>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Panduan Pendaftaran</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Panduan Pembayaran</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- <div class="footer-col">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-solid fa-globe"></i></a>
+            <!----Home---->
+            <section class="home" id="home">
+                <div class="content">
+                    <div class="imgBx">
+                        <img src="img/profile.jpg">
                     </div>
-                </div> -->
+                    <h3>Muhammad Arrafi Septiawan</h3>
+                    <p>Web Development</p>
+                    <a href="cvOri2/index.html" class="btn">Download My CV</a>
+                    <ul class="socialMedia">
+                        <li><a href="https://github.com/rangerbiru"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/arrafi_septiawan/"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/arrafi_lynx"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!---About---->
+            <section class="about adjust" id="about">
+                <div class="title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="content">
+                    <div class="textBox">
+                        <p>My name is Muhammad Arrafi Septiawan, and peoples used to call me Arrafi. I am a web developer from Indonesia. I have experience in this field for 2 years.<br><br> I have experience working with HTML, CSS, PHP, and Javascript.
+                            and I also have experience using frameworks like Svelte, ReactJS, Angular for Front-End and CodeIgniter and Laravel frameworks for Back-End. I've been working on projects like E-commerce, Company Profiles, Portfolio, and others.
+                            <br><br> I am the type of person who is easy to communicate and socialize. I can work professionally and with discipline
+
+                        </p>
+                    </div>
+                    <div class="imgBx">
+                        <img src="img/imgAbout.jpg">
+                    </div>
+                </div>
+            </section>
+
+            <!----Services----->
+            <section class="services adjust" id="services">
+                <div class="title">
+                    <h2>Our Services</h2>
+                    <p>I have some services you can get from me</p>
+                </div>
+                <div class="content">
+                    <div class="serviceBox">
+                        <img src="img/icon1.png" style="margin: 5px 0;">
+                        <h2>Web Development</h2>
+                        <p>I can develop a website that you want. The coding languages that I usually use include HTML/CSS, PHP, JavaScript, and TypeScript</p>
+                    </div>
+                    <div class="serviceBox">
+                        <img src="img/icon2.png">
+                        <h2>Web Design</h2>
+                        <p>I can design your website with a more attractive appearance. I have experience using CSS frameworks such as Bootstrap, Tailwinds, and Metro UI</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-----Project----->
+            <section class="project adjust" id="project">
+                <div class="title">
+                    <h2>Recent Work</h2>
+                    <p>Some of the projects I've worked on, Check this out !</p>
+                </div>
+                <div class="content">
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project1.jpg">
+                        </div>
+                        <a href="project/cv_1/index.html" target="_blank">
+                            <div class="textBx">
+                                <h3>CV With HTML & CSS 01</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project2.jpg">
+                        </div>
+                        <a href="project/cv_2/index.html" target="_blank">
+                            <div class="textBx">
+                                <h3>CV With HTML & CSS 02</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project-banisaleh.PNG">
+                        </div>
+                        <a href="https://rangerbiru.github.io/project-banisaleh/" target="_blank">
+                            <div class="textBx">
+                                <h3>Project PMB STMIK Bani Saleh</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project4.PNG">
+                        </div>
+                        <a href="project/qof_herbal/application/views/dashboard.php">
+                            <div class="textBx">
+                                <h3>Simple E-Commerce</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project5.PNG">
+                        </div>
+                        <a href="project/traveler/index.html" target="_blank">
+                            <div class="textBx">
+                                <h3>Travels Landing Page</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="workBx">
+                        <div class="imgBx">
+                            <img src="img/project6.PNG">
+                        </div>
+                        <a href="project/portofolio_2/index.html" target="_blank">
+                            <div class="textBx">
+                                <h3>Culiners Landing Page</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-----Contact----->
+            <section class="contact adjust" id="contact">
+                <div class="title">
+                    <h2>Contact Me</h2>
+                    <p>If you have any questions with me or about me, please leave a message for me</p>
+                </div>
+                <div class="contactForm">
+                    <div class="row">
+                        <input type="text" name="" placeholder="First Name">
+                        <input type="text" name="" placeholder="Last Name">
+                    </div>
+                    <div class="row">
+                        <input type="text" name="" placeholder="Email Address">
+                        <input type="text" name="" placeholder="Mobile No.">
+                    </div>
+                    <div class="row2">
+                        <textarea placeholder="Massage"></textarea>
+                    </div>
+                    <div class="row2">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </section>
+
+            <div class="copyright">
+                <p style="margin-left: 38px;">Copyright &copy; 2021 Ranger Biru</p>
             </div>
+
         </div>
-    </footer>
-    <footer class="footer-bottom">
-        <div class="footer-logo">
-            <img src="img/logo.png" alt="STMIK Bani Saleh">
-            <p>Copyright STMIK BANI SALEH 2021</p>
-        </div>
-        <div class="link-social">
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-solid fa-globe"></i></a>
-        </div>
-    </footer>
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $('.nav-item').click(function() {
-                $(this).addClass('active').siblings().removeClass('active');
-            })
-        })
-    </script> -->
-
-    <!--Script AOS--->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    </div>
 
     <script>
-        var btn = $('#btn-top');
+        let toggle = document.querySelector('.toggle');
+        let topbar = document.querySelector('.topbar');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
 
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-                // wa.addClass('show');
-            } else {
-                btn.removeClass('show');
-                // wa.removeClass('show');
-            }
-        });
+        toggle.onclick = function() {
+            toggle.classList.toggle('active');
+            topbar.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
 
-        btn.on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, '300');
-        });
-    </script>
+        //fix menu mobile
+        function toggleMenu() {
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
 
-    <script>
-        $("#img-slide > .imgBox:gt(0)").hide();
-
-        setInterval(function() {
-            $('#img-slide > .imgBox:first')
-                .fadeOut(1000)
-                .next()
-                .fadeIn(1000)
-                .end()
-                .appendTo('#img-slide');
-        }, 4000);
+            navigation.classList.remove('active');
+            main.classList.remove('active');
+        }
     </script>
 </body>
 
