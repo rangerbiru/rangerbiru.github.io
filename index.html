@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="./img/fav/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" href="./img/fav/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="./img/fav/favicon-32x32.png" sizes="32x32">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Portfolio | Muhammad Arrafi Septiawan</title>
 </head>
 
@@ -22,6 +23,7 @@
                 <li><a href="#about" onclick="toggleMenu();">About</a></li>
                 <li><a href="#services" onclick="toggleMenu();">Services</a></li>
                 <li><a href="#project" onclick="toggleMenu();">Project</a></li>
+                <li><a href="#certificate" onclick="toggleMenu();">Certificate</a></li>
                 <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
             </ul>
         </div>
@@ -174,7 +176,7 @@
                 </div>
             </section>
 
-            <section class="certificate">
+            <section class="certificate" id="certificate">
                 <div class="title">
                     <h2>Our Certificate</h2>
                     <p>Some activity certificates i have</p>
@@ -192,22 +194,24 @@
                     <h2>Contact Me</h2>
                     <p>If you have any questions with me or about me, please leave a message for me</p>
                 </div>
-                <div class="contactForm">
+                <form class="contactForm" name="form-contact">
                     <div class="row">
-                        <input type="text" name="" placeholder="First Name">
-                        <input type="text" name="" placeholder="Last Name">
+                        <input type="text" name="firstName" placeholder="First Name">
+                        <input type="text" name="lastName" placeholder="Last Name">
                     </div>
                     <div class="row">
-                        <input type="text" name="" placeholder="Email Address">
-                        <input type="text" name="" placeholder="Mobile No.">
+                        <input type="text" name="email" placeholder="Email Address">
+                        <input type="text" name="telepon" placeholder="Mobile No.">
                     </div>
                     <div class="row2">
-                        <textarea placeholder="Massage"></textarea>
+                        <textarea placeholder="Massage" name="pesan"></textarea>
                     </div>
                     <div class="row2">
-                        <input type="submit" value="Send">
+                        <button type="submit" class="btn-kirim">Send Message</button>
+                        <button type="button" class="btn-loading d-none" disabled><i class="fas fa-spinner fa-spin"
+                                style="margin-right: 5px; margin-top: -1px; font-size: 14px;"></i>Loading</button>
                     </div>
-                </div>
+                </form>
             </section>
 
             <div class="copyright">
@@ -238,6 +242,37 @@
             navigation.classList.remove('active');
             main.classList.remove('active');
         }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3QuyRyh1WT_T3-H7kpwwQaW6FwcZt_mwQVPsQ2rv3rAbDCaDmjgLKokOjFZgGvYN4/exec'
+        const form = document.forms['form-contact']
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    btnLoading.classList.toggle('d-none');
+                    btnKirim.classList.toggle('d-none');
+                    Swal.fire(
+                        'Good job!',
+                        'You clicked the button!',
+                        'success'
+                    )
+                    form.reset();
+                    console.log('Success!', response);
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 </body>
 
