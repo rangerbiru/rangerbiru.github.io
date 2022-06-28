@@ -401,7 +401,8 @@ p {
 }
 
 .certif-img {
-    width: 50rem;
+    width: 40rem;
+    margin: 0 .5rem;
 }
 
 .certif-img img {
@@ -557,6 +558,14 @@ p {
     }
     .copyright {
         margin-left: -40px;
+    }
+    .certificateBx {
+        flex-direction: column;
+        align-items: center;
+    }
+    .certif-img {
+        width: 95%;
+        margin: 1rem 0;
     }
 }
 
