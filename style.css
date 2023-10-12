@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -139,6 +140,23 @@ section {
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+}
+
+.content-filter {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 12px;
+}
+
+.content-filter .list {
+    list-style: none;
+    padding: 10px;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #fff;
 }
 
 .home .content {
@@ -495,45 +513,56 @@ p {
     .navigation {
         left: -100%;
     }
+
     .navigation.active {
         left: 0;
         width: 100%;
     }
+
     .main {
         width: 100%;
         left: 0;
     }
+
     .main.active {
         left: 100%;
     }
+
     .main .topbar {
         width: 100%;
         left: 0;
         padding: 0 20px;
     }
+
     .navigation ul {
         padding: 20px 20px;
     }
+
     .home h3,
     .home p {
         text-align: center;
     }
+
     .home .imgBx {
         width: 250px;
         height: 250px;
     }
+
     .adjust {
         padding: 0 20px;
         padding-top: 80px;
     }
+
     .about .content {
         flex-direction: column;
     }
+
     .about .content .textBox {
         width: 100%;
         min-width: 100%;
         text-align: justify;
     }
+
     .about .content .imgBx {
         margin-left: 0;
         margin-top: 20px;
@@ -544,25 +573,32 @@ p {
     .services .content {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .project .content {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .contact .contactForm {
         margin-right: 40px;
     }
+
     .contact .contactForm .row {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .contact {
         margin-bottom: 100px;
     }
+
     .copyright {
         margin-left: -40px;
     }
+
     .certificateBx {
         flex-direction: column;
         align-items: center;
     }
+
     .certif-img {
         width: 95%;
         margin: 1rem 0;
