@@ -410,22 +410,21 @@ p {
 }
 
 .certificateBx {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin: 2rem 0;
     display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+    gap: 15px;
     justify-content: center;
 }
 
 .certif-img {
-    width: 40rem;
-    margin: 0 .5rem;
+    cursor: pointer;
 }
 
 .certif-img img {
-    width: 100%;
-    height: 100%;
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
 }
 
 .contact {

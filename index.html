@@ -14,6 +14,8 @@
     <link rel="icon" type="image/png" href="./img/fav/favicon-32x32.png" sizes="32x32">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Portfolio | Muhammad Arrafi Septiawan</title>
+    <!-- FancyBox Gallery Libraries -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
@@ -195,11 +197,29 @@
                     <p>Some activity certificates i have</p>
                 </div>
                 <div class="certificateBx">
-                    <div class="certif-img">
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/certificate2.jpg"
+                        data-caption="Sertifikat Pelatihan VSGA">
                         <img src="img/certificate2.jpg">
                     </div>
-                    <div class="certif-img">
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/sertifikat1.png"
+                        data-caption="Sertifikat Keharian BAPAREKRAF DEVELOPER DAY 2022">
                         <img src="img/sertifikat1.png">
+                    </div>
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/bnsp_page-0001.jpg"
+                        data-caption="Sertifikat BNSP Junior Web Developer">
+                        <img src="img/bnsp_page-0001.jpg">
+                    </div>
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/javascript-dasar_page-0001.jpg"
+                        data-caption="Sertifikat Javascript Dasar Dicoding">
+                        <img src="img/javascript-dasar_page-0001.jpg">
+                    </div>
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/reactjs_page-0001.jpg"
+                        data-caption="Sertifikat Aplikasi Web ReactJs Dicoding">
+                        <img src="img/reactjs_page-0001.jpg">
+                    </div>
+                    <div class="certif-img" data-fancybox="sertifikat" data-src="img/web-dasar_page-0001.jpg"
+                        data-caption="Sertifikat Web Dasar Dicoding">
+                        <img src="img/web-dasar_page-0001.jpg">
                     </div>
                 </div>
             </section>
@@ -265,7 +285,7 @@
     </script>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbw3QuyRyh1WT_T3-H7kpwwQaW6FwcZt_mwQVPsQ2rv3rAbDCaDmjgLKokOjFZgGvYN4/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx7rXIMt0Fd0PQejfmO4i7siwrarY2EFs2xNRaMuH0ao6nW3zzQnlWCrox-Ocwp7W1E/exec'
         const form = document.forms['form-contact']
         const btnKirim = document.querySelector('.btn-kirim');
         const btnLoading = document.querySelector('.btn-loading')
@@ -314,6 +334,12 @@
                 $(this).addClass('active').siblings().removeClass('active')
             })
         })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        Fancybox.bind('[data-fancybox]'), {
+
+        }
     </script>
 </body>
 
