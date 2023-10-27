@@ -15,6 +15,59 @@
     --white2: #fff;
 }
 
+.dark-mode .btn {
+    background: var(--white) !important;
+    color: var(--black) !important;
+    font-weight: 600;
+}
+
+.dark-mode .main .topbar {
+    border-bottom: 1px solid #4e4e4e !important;
+    background: #333 !important;
+}
+
+.dark-mode .navigation {
+    border-right: 1px solid #4e4e4e !important;
+}
+
+.dark-mode .main .topbar .toggle {
+    color: #fff !important;
+}
+
+.dark-mode .workBx .textBx h3 {
+    padding: 10px;
+}
+
+.dark-mode,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a,
+.dark-mode li {
+    background: var(--black) !important;
+    color: var(--white) !important;
+}
+
+.dark-mode .socialMedia li a {
+    background: #4e4e4e !important;
+}
+
+.dark-mode .list.active {
+    border: 1px solid #fff !important;
+}
+
+.dark-mode .workBx .textBx {
+    background: #fff !important;
+}
+
+.dark-mode .title h2::before {
+    background: #fff !important;
+}
+
+.dark-mode .copyright {
+    border-top: 1px solid #4e4e4e;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -29,7 +82,7 @@ body {
     width: 300px;
     height: 100%;
     border-right: 1px solid rgba(0, 0, 0, 0.05);
-    background: var(--white2);
+    /* background: var(--white2); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,11 +127,22 @@ body {
     opacity: 1;
 }
 
+/* Dark Mode */
+.btn-dark {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+}
+
+.btn-darkmode {
+    padding: 10px;
+}
+
 .main {
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
-    background: var(--white);
+    /* background: var(--white); */
     min-height: 100vh;
     transition: width 0.5s, left 0.5s;
 }
@@ -152,11 +216,23 @@ section {
 .content-filter .list {
     list-style: none;
     padding: 10px;
-    background-color: red;
+    background-color: var(--black);
     cursor: pointer;
     border-radius: 2px;
     font-size: 14px;
     color: #fff;
+    transition: all .3s ease-in-out;
+    font-weight: 500;
+}
+
+.content-filter .list:hover {
+    background-color: #000;
+}
+
+.content-filter .list.active {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid #333;
 }
 
 .home .content {
@@ -254,7 +330,7 @@ p {
     width: 100%;
     padding: 0 40px;
     padding-top: 80px;
-    background: var(--white);
+    /* background: var(--white); */
     color: var(--black);
 }
 
@@ -316,7 +392,7 @@ p {
     border: 1px solid rgba(0, 0, 0, 0.05);
     padding: 50px 20px;
     display: flex;
-    background: var(--white2);
+    /* background: var(--white2); */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -354,7 +430,7 @@ p {
     height: 300px;
     overflow: hidden;
     cursor: pointer;
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
 }
 
 .project .content .workBx .imgBx {

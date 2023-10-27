@@ -28,7 +28,12 @@
                 <li><a href="#project" onclick="toggleMenu();">Project</a></li>
                 <li><a href="#certificate" onclick="toggleMenu();">Certificate</a></li>
                 <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+
             </ul>
+            <div class="btn-dark">
+                <button onclick="darkMode()" class="btn-darkmode">Dark Mode</button>
+            </div>
+
         </div>
 
         <div class="main">
@@ -46,7 +51,7 @@
                         <img src="img/profile.jpg">
                     </div>
                     <h3>Muhammad Arrafi Septiawan</h3>
-                    <p>Web Development</p>
+                    <p>Web Developer</p>
                     <a href="cvOri2/index.html" class="btn">Download My CV</a>
                     <ul class="socialMedia">
                         <li><a href="https://github.com/rangerbiru" target="_blank"><i class="fab fa-github"></i></a>
@@ -68,10 +73,11 @@
                 <div class="content">
                     <div class="textBox">
                         <p>My name is Muhammad Arrafi Septiawan, and peoples used to call me Arrafi. I am a web
-                            developer from Indonesia. I have experience in this field for 2 years.<br><br> I have
+                            developer from Indonesia. I have experience in this field for 3 years.<br><br> I have
                             experience working with HTML, CSS, PHP, and Javascript.
-                            and I also have experience using frameworks like Svelte, ReactJS, Angular for Front-End and
-                            CodeIgniter and Laravel frameworks for Back-End. I've been working on projects like
+                            and I also have experience using frameworks like Svelte, ReactJS, Angular for Front-End
+                            Framework, ExpressJs and Laravel for Back-End Framework
+                            CodeIgniter and Laravel for Fullstack Web Framework. I've been working on projects like
                             E-commerce, Company Profiles, Portfolio, and others.
                             <br><br> I am the type of person who is easy to communicate and socialize. I can work
                             professionally and with discipline
@@ -93,9 +99,10 @@
                 <div class="content">
                     <div class="serviceBox">
                         <img src="img/icon1.png" style="margin: 5px 0;">
-                        <h2>Web Development</h2>
+                        <h2>Web Developer</h2>
                         <p>I can develop a website that you want. The coding languages that I usually use include
-                            HTML/CSS, PHP, JavaScript, and TypeScript</p>
+                            HTML/CSS, PHP, and JavaScript. I can also use frameworks in web creation, such as ReactJs,
+                            NextJs, and Laravel</p>
                     </div>
                     <div class="serviceBox">
                         <img src="img/icon2.png">
@@ -115,6 +122,7 @@
                 <ul class="content-filter">
                     <li class="list active" data-filter="html-css">HTML & CSS</li>
                     <li class="list" data-filter="reactjs">ReactJs</li>
+                    <li class="list" data-filter="wordpress">Wordpress</li>
                 </ul>
                 <div class="content">
                     <div class="workBx html-css">
@@ -188,6 +196,17 @@
                             </div>
                         </a>
                     </div>
+                    <!-- Wordpress -->
+                    <div class="workBx wordpress">
+                        <div class="imgBx">
+                            <img src="img/project-wp-1.png">
+                        </div>
+                        <a href="https://arrafi-wulan.site/" target="_blank">
+                            <div class="textBx">
+                                <h3>Project Wedding Invitation</h3>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -257,9 +276,17 @@
         </div>
     </div>
 
+    <script>
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode")
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
         integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 
     <script>
         let toggle = document.querySelector('.toggle');
@@ -341,6 +368,7 @@
 
         }
     </script>
+
 </body>
 
 </html>
